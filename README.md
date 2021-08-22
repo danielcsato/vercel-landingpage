@@ -1,7 +1,3 @@
-## Authors
-
-- [@danielcsato](https://www.github.com/danielcsato)
-
 ## Run Locally
 
 Clone the project
