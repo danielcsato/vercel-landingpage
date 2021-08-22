@@ -1,0 +1,181 @@
+.root {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 366px;
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+    max-width: 1000px;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.3rem;
+  font-size: 80px;
+  @media (min-width: 768px) {
+    font-size: 128px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 160px;
+  }
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  line-height: 1;
+}
+
+.animation {
+  user-select: none;
+  position: relative;
+  width: 100%;
+  height: 106px;
+  @media (min-width: 768px) {
+    height: 170px;
+  }
+  @media (min-width: 1440px) {
+    height: 213px;
+  }
+  &__develop {
+    &::before {
+      left: 0;
+      position: absolute;
+      @extend .animation;
+      @extend .blueCyan;
+      content: "Develop.";
+    }
+  }
+  &__preview {
+    &::before {
+      @extend .animation;
+      @extend .purplePink;
+      left: 0;
+      position: absolute;
+      content: "Preview.";
+    }
+  }
+  &__ship {
+    &::before {
+      @extend .animation;
+      @extend .redYellow;
+      left: 0;
+      position: absolute;
+      content: "Ship.";
+    }
+  }
+}
+
+.buttons {
+  margin-bottom: 3rem;
+  width: 327px;
+  @media (min-width: 768px) {
+    width: unset;
+    display: flex;
+  }
+}
+
+.description {
+  text-align: center;
+  color: #666;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  br {
+    display: none;
+    @media (min-width: 1440px) {
+      display: block;
+    }
+  }
+}
+
+.blueCyan {
+  background: -webkit-linear-gradient(10deg, var(--blue), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blueCyan 12s ease infinite;
+  opacity: 1;
+}
+
+.purplePink {
+  background: -webkit-linear-gradient(10deg, var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: purplePink 12s ease infinite;
+  opacity: 1;
+}
+
+.redYellow {
+  background: -webkit-linear-gradient(10deg, var(--red), var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: redYellow 12s ease infinite;
+  opacity: 1;
+}
+
+@keyframes blueCyan {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.01;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes purplePink {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.01;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes redYellow {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 0;
+  }
+}
