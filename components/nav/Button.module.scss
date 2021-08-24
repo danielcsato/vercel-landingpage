@@ -1,0 +1,27 @@
+.anchor {
+  user-select: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 1px solid black;
+  transition: 0.2s ease background-color, 0.2s ease border-color, 0.2s ease color;
+  padding: 0 12px;
+
+  &__filled {
+    @extend .anchor;
+    background-color: black;
+    color: white;
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  &:hover {
+    color: black;
+  }
+}

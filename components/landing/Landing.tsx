@@ -1,13 +1,13 @@
-import Head from "next/head";
-import Button from "../button/Button";
-import styles from "./Landing.module.scss";
+import Head from 'next/head';
+import Button from '../button/Button';
+import styles from './Landing.module.scss';
 
 export default function Landing() {
   return (
     <div className={styles.root}>
       <Head>
         <title>Vercel Landing</title>
-        <meta name="description" content="by LJtech" />
+        <meta name="description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
@@ -22,9 +22,8 @@ export default function Landing() {
         <Button href="/" layout="outline" title="Get a Demo" />
       </div>
       <h2 className={styles.description}>
-        Vercel combines the best developer experience with an obsessive focus on
-        end-user performance. <br /> Our platform enables frontend teams to do
-        their best work.
+        Vercel combines the best developer experience with an obsessive focus on end-user performance. <br /> Our platform enables
+        frontend teams to do their best work.
       </h2>
     </div>
   );

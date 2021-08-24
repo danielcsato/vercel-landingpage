@@ -1,0 +1,132 @@
+.root {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--white);
+  z-index: 101;
+  min-height: 80px;
+  transition: box-shadow 0.1s ease 0s, background-color 0.1s ease 0s;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1048px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  &__left,
+  &__right,
+  &__middle {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__right {
+    div {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      color: #666;
+      font-size: 0.875rem;
+      justify-content: space-between;
+      display: none;
+      opacity: 1;
+      animation-name: fadeIn;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 0.3s;
+      -webkit-tap-highlight-color: transparent;
+      @media (min-width: 1040px) {
+        display: flex;
+      }
+
+      &:hover {
+        color: var(--black);
+      }
+
+      a {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &__middle {
+    margin: 0;
+    width: 100%;
+    background-color: transparent;
+    display: none;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    -webkit-tap-highlight-color: transparent;
+    @media (min-width: 1040px) {
+      display: block;
+    }
+
+    ul {
+      opacity: 1;
+      pointer-events: all;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.875rem;
+      transition: opacity 0.2s ease-in-out;
+      will-change: opacity;
+      li {
+        margin-left: 12px;
+        cursor: pointer;
+        a {
+          padding: 8px;
+          color: #666;
+
+          &:hover {
+            color: var(--black);
+          }
+        }
+      }
+    }
+  }
+
+  &__left {
+    div {
+      background: none;
+      border: none;
+      padding: 8px;
+      margin: -8px;
+      cursor: pointer;
+      display: inline-flex;
+      position: relative;
+    }
+  }
+}
+
+.header_logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  img {
+    height: 26px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
